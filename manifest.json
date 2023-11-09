@@ -1,12 +1,8 @@
 {
     "name": "Youtube Skip ads and Mute for Chrome",
-    "description": "Auto skip or mute youtube ads",
+    "description": "Auto skip and mute youtube ads",
     "version": "1.0.0",
     "manifest_version": 3,
-    "permissions": [
-        "tabs",
-        "scripting"
-    ],
     "icons": {
         "16": "icon/icon_16x16.png",
         "48": "icon/icon_48x48.png",
