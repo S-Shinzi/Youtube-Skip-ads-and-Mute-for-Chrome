@@ -13,12 +13,22 @@ const clickSkipAdButton = () => {
     }else if(adPreview && !isMute()) {
         //Can not skip Ad & not mute
         clickMuteButton();
+        speedUpAd();
     };
 };
 
 const clickMuteButton = () => {
     const muteButton = document.querySelectorAll(".ytp-mute-button")[0];
     if(muteButton) muteButton.click();
+};
+
+const speedUpAd = () => {
+    const moviePlayer = document.querySelector("#movie_player");
+    const video = moviePlayer.querySelector("video");
+    if(video){
+        //speed up
+        video.playbackRate = 16;
+    }
 };
 
 //Mute check
