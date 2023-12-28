@@ -2,19 +2,27 @@
 const targetId = '#ytd-player'
 
 const clickSkipAdButton = () => {
+    //Mute Ad
+    clickMuteButton();
+
     //Ad skip button
     const skipAdButtoon = document.querySelectorAll(".ytp-ad-skip-button-container")[0];
+
     //Ad preview
     const adPreview = document.querySelectorAll(".ytp-ad-preview-container")[0];
 
     if(skipAdButtoon) {
         //Can skip Ad
-        skipAdButtoon.click();
+        setTimeout(skipAdButtoonClick, 10 ,skipAdButtoon);
     }else if(adPreview && !isMute()) {
         //Can not skip Ad & not mute
-        clickMuteButton();
         speedUpAd();
     };
+};
+
+//Ad skip button
+const skipAdButtoonClick = (skipAdButtoon) => {
+    skipAdButtoon.click()
 };
 
 const clickMuteButton = () => {
